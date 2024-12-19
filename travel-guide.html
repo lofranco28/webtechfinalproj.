@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+            <span>Travel Blog</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#trend">Trend</a></li>
+            <li class="dropdown">
+                <a href="#destination">Island Destination</a>
+                <ul class="dropdown-menu">
+                    <li>Luzon
+                        <ul>
+                            <li><a href="luzon.html?category=Beach">Beach</a></li>
+                            <li><a href="luzon.html?category=Hiking">Hiking</a></li>
+                            <li><a href="luzon.html?category=Falls">Falls</a></li>
+                            <li><a href="luzon.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Visayas
+                        <ul>
+                            <li><a href="visayas.html?category=Beach">Beach</a></li>
+                            <li><a href="visayas.html?category=Hiking">Hiking</a></li>
+                            <li><a href="visayas.html?category=Falls">Falls</a></li>
+                            <li><a href="visayas.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Mindanao
+                        <ul>
+                            <li><a href="mindanao.html?category=Beach">Beach</a></li>
+                            <li><a href="mindanao.html?category=Hiking">Hiking</a></li>
+                            <li><a href="mindanao.html?category=Falls">Falls</a></li>
+                            <li><a href="mindanao.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    
+     <!-- Guide Section -->
+    <section id="guide-section" class="guide-container">
+        <div class="guide-header">
+            <h1 id="destination-title">Destination Title</h1>
+            <p id="destination-subtitle">Category: <span id="category-name"></span> | Island: <span id="region-name"></span></p>
+        </div>  
+
+        <div class="guide-details">
+            
+            <div class="guide-content">
+                
+                <div class="guide-images">
+                    <!-- Video for the destination -->
+                    <video autoplay loop muted id="video" controls width="800">
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="guide-descript">
+
+                    <h3 id="destination-description">
+
+                    </h3>
+    
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Retrieve query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const region = urlParams.get('region'); // Region (e.g., "Visayas")
+        const category = urlParams.get('category'); // Category (e.g., "Beach")
+        const guide = urlParams.get('guide'); // Guide name (e.g., "Malapascua Travel Guide")
+        const name = urlParams.get('name');
+        const howToGo = urlParams.get('howToGo'); // How to get there
+        const details2 = urlParams.get('details2'); // Optional second detail
+
+        
+
+    
+        // Define a mapping of guides to their respective video URLs
+        const guideVideos = {
+            // Luzon Travel Guide
+            "Pagudpud Beach Travel Guide": "image/pagudpud.mp4", 
+            "Puerto galera Travel Guide": "image/puerto.mp4",
+            "Mt. Pulag Travel Guide": "image/pulag.mp4",
+            "Mt. Pinatubo Travel Guide": "image/pinatubo.mp4",
+            "Pagsanjan Falls Travel Guide": "image/pagsanjan.mp4",
+            "Daranak Falls Travel Guide": "image/daranak.mp4",
+            "Casa Manila Travel Guide": "image/casamanila.mp4",
+            "Vigan Travel Guide": "image/vigan.mp4",
+            // Visayas Travel Guide
+            "Daan Bantayan Travel Guide": "image/daanbantayan.mp4",
+            "Malapascua Travel Guide": "image/malapascua.mp4",
+            "Osmeña Peak Travel Guide": "image/osmenapeak.mp4",
+            "Sea Cloud Travel Guide": "image/seacloud.mp4",
+            "Kawasan Falls Travel Guide": "image/kasawan.mp4",
+            "Tumalog Falls Travel Guide": "image/tumalog.mp4",
+            "Magellan Cross Travel Guide": "image/magellancross.mp4",
+            "Santo Nino Travel Guide": "image/stonino.mp4",
+            // Mindanao Travel Guide
+            "Samal Travel Guide": "image/samal.mp4",
+            "Magpupungko Travel Guide": "image/magpupungko.mp4",
+            "Mt. Apo Travel Guide": "image/apo.mp4",
+            "3003 Steps to Linabo Peak Travel Guide": "image/linabopeak.mp4",
+            "Tinuy-an Falls Travel Guide": "image/tinuyan.mp4",
+            "Aliwagwag Falls Travel Guide": "image/aliwagwag.mp4",
+            "Fort Pillar Travel Guide": "image/fortpillar.mp4",
+            "Rizal Shrine Travel Guide": "image/rizalshrine.mp4",
+            //
+            "Boracay Travel Guide": "image/boracay.mp4", 
+            "Fort San Pedro Travel Guide": "image/fortsanpedro.mp4", 
+            "El Nido Travel Guide": "image/elnido.mp4", 
+            "Chocolate Hills Travel Guide": "image/chocolatehills.mp4", 
+            "Siargao Travel Guide": "image/siargao.mp4", 
+            "Mayon Volcano Travel Guide": "image/mayon.mp4", 
+        };
+    
+        // Update the page content dynamically
+        document.getElementById('destination-title').innerText = guide;
+        document.getElementById('region-name').innerText = region;
+        document.getElementById('category-name').innerText = category;
+    
+        // Add the new details to the guide
+        const extraDetailsDiv = document.createElement('div');
+        extraDetailsDiv.innerHTML = `
+            ${details2 ? `
+            <h5>Guide on How to Go There</h5>
+            <h6>${howToGo}</h6>
+            <h5>Things That Needs To Do</h5>
+            <h6>${details2}</h6>
+            ` : ''}
+        `;
+        document.querySelector('.guide-descript').appendChild(extraDetailsDiv);
+
+        // Update the description (Example: Add specific details about Malapascua here)
+        document.getElementById('destination-description').innerText = `Everything you need to know about ${guide}. Discover the beauty of ${region} and why its a perfect destination for ${category}.`;
+    
+        // Dynamically set the video source for the selected guide
+        const videoSrc = guideVideos[guide] || ''; // Fallback to an empty string if no video is found
+        const videoElement = document.getElementById('video');
+        const videoSource = videoElement.querySelector('source');
+        videoSource.src = videoSrc;
+        videoElement.load(); // Reload the video to apply the new source
+    </script>
+    
+</body>
+</html>

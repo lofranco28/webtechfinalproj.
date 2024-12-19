@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzon - Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+            <span>Travel Blog</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#trend">Trend</a></li>
+            <li class="dropdown">
+                <a href="#destination">Island Destination</a>
+                <ul class="dropdown-menu">
+                    <li>Luzon
+                        <ul>
+                            <li><a href="luzon.html?category=Beach">Beach</a></li>
+                            <li><a href="luzon.html?category=Hiking">Hiking</a></li>
+                            <li><a href="luzon.html?category=Falls">Falls</a></li>
+                            <li><a href="luzon.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Visayas
+                        <ul>
+                            <li><a href="visayas.html?category=Beach">Beach</a></li>
+                            <li><a href="visayas.html?category=Hiking">Hiking</a></li>
+                            <li><a href="visayas.html?category=Falls">Falls</a></li>
+                            <li><a href="visayas.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Mindanao
+                        <ul>
+                            <li><a href="mindanao.html?category=Beach">Beach</a></li>
+                            <li><a href="mindanao.html?category=Hiking">Hiking</a></li>
+                            <li><a href="mindanao.html?category=Falls">Falls</a></li>
+                            <li><a href="mindanao.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <section id="content">
+        <h1 id="region-title">Luzon - <span id="category-title"></span></h1>
+        <div id="destination-list" class="destination-gallery">
+            <!-- JavaScript will dynamically insert content here -->
+        </div>
+    </section>
+
+    <script>
+        // Get the category from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+
+        // Update the page title dynamically
+        document.getElementById('category-title').innerText = category;
+
+        // Define destinations for Visayas with additional details
+        const destinations = {
+            Beach: [
+                { 
+                    name: "Pagudpud Beach", 
+                    img: "pagudpud.png", 
+                    guide: "Pagudpud Beach Travel Guide", 
+                    details: "Pagudpud is a town on the north coast of Luzon Island, in the Philippines. Resorts line the long stretch of Saud Beach, on the wide sweep of Bangui Bay. The towering Bangui Windmills wind turbines are arrayed in a row along the coast. East of town, Pasaleng Bay is home to Bantay Abot Cave, a natural tunnel eroded through the headland, and secluded Maira-ira Beach.", 
+                    howToGo: "By Plane: With Manila as your start off point, you can board a 45 minute flight to Laoag International Airport via Philippine Airlines and take a two hour bus ride to Pagudpud. By Land: Various bus lines serve the Manila-Pagudpud route for a 10-12 hour drive. They operate day and night trips with standard, air-conditioned, deluxe and sleeper buses with built in toilet. Getting Around Pagudpud: To get around Pagudpud, one can take a minibus with fixed route with minimal fare to selected destinations. Tricycles are commonly used in reaching famous attractions and one of the benefits of hiring a tricycle is that the drivers are trained tour guides and they offer a detailed itinerary within the municipality. Tricyle: These local taxis are widely available in the municipality with a minimum fare of Php 25 per passenger to nearby areas but you can also hire them for a complete Pagudpud Tour if you wish to have a trained local tour guide. Mini Bus: Some areas can be reached by mini bus at a minimum fare but most are not air-conditioned. Rent a Van: Renting a van is convenient if you travel in a large group since some of the attractions are 10-15 minutes apart.",
+                    details2: "Traveling far north to Pagudpud, the northernmost town in Ilocos Region, Philippines, may not be a popular course, but it is definitely worth it. Pagudpud hosts some of the most endearing natural attractions, which remained unexploited, unlike the other tourist spots in Ilocandia. You can have a grand time at its beaches or go on a scenic hour-long walk through the Secret Green Hills for a rejuvenating experience. Other must-visit attractions are Kabigan Falls, Patapat Viaduct, Agua Grande, Dos Hermanos Islands, Timmangtang Rock, and Bantay Abot Cave. Abandoned buildings like Bagong Lipunan Lodge Ruins might also tickle your fancy with its fascinating architecture and eerie feel that will get your adrenaline pumping."
+                },
+                { 
+                    name: "Puerto Galera", 
+                    img: "puertogelera.png", 
+                    guide: "Puerto galera Travel Guide", 
+                    details: "Puerto Galera is primarily famous for its splendid beaches, coral reefs teeming with marine life and exquisite dive sites. The region was declared a Marine Reserve by the United Nations in 1974, owing to its abundance of exotic fish species seldom seen elsewhere." , 
+                    howToGo: "Your main jump-off point when going to Puerto Galera is Manila. It only takes around 3-4 hours to get there from Manila. You can either make a land trip to Batangas Pier by bus or by private car then sea travel by ferry or RoRo or fly directly by seaplane. By Bus: It is the more common option for most vacationers. The most popular route is the bus from Manila to Batangas Pier. Major bus lines have regular trips from Buendia LRT (Light Rail Train) station in Pasay City and Cubao, Quezon City terminals. Regardless of where you come from, it will cost you around Php 200 one way. If you’re coming from the Ninoy Aquino International Airport in Pasay City, the Buendia LRT terminal is your best option. Trips start at 12:00 am until 10:30 pm, and there’s a bus every 30 minutes. You could try your luck being a chance passenger. However, if you want added convenience, it’s best to purchase tickets online at the bus line websites. The travel time from the terminals to the Batangas Pier takes approximately 1.5-2 hours, depending on traffic conditions.",
+                    details2: "Indeed, for anyone looking for a quick weekend escape to the seaside, Puerto Galera beach has proven to be a tried and tested option. When it comes to accessibility, value for money, and sheer variety of things to do or places to see, there is nothing quite like Puerto Galera. Whether you’re looking for a laidback weekend lounging by the shore, an action-packed activity to get your adrenaline pumping, or a wholesome activity with your family, there’s something you can truly enjoy."
+                }
+            ],
+            Hiking: [
+                { 
+                    name: "Mt. Pulag", 
+                    img: "pulag.png", 
+                    guide: "Mt. Pulag Travel Guide", 
+                    details: "Mt Pulag, at 2,930 m, is the highest mountain on Luzon and the second highest in the Philippines. The lowest elevation in the park is 1,100 m on the western slopes, and it descends to 1,200 m on the eastern slopes. Steep terrain with many deep ravines and gorges characterize the area." , 
+                    howToGo: "The Mt. Pulag Tour organized by the travel agency includes transportation from Baguio to Mt. Pulag and vice versa. But if you plan to do it DIY-style you may. From MANILA to Baguio: ride a bus going to Baguio via Victory Liner or Genesis/Joy Bus (both transit companies have terminals located at Pasay and Quezon City). Bus fare: Genesis-Joy Bus - P450 Regular, P755 Deluxe Victory Liner - P455 Regular, P750 First Class Travel time: Manila to Baguio - Approx. 4-7 hrs. From BAGUIO to Kabayan via bus or van: From Baguio, hail a taxicab going to Old Slaughterhouse Terminal. Tell the driver to drop you off at the van terminal of Kabayan (first trip leaves at 7 a.m.). Taxi fare: P70-P150 Ask the van driver to drop you off near the DENR Visitor Center Station. Van fare: P150 Travel time: Baguio to DENR Station - Approx. 2-3 hrs. Proceed to DENR Visitor Center Station in Bokod, Benguet. You need to register here first before your climb—log-in your names, pay the fees, and complete the prerequisites (they require a medical certificate to see if you are qualified to climb)—and attend a 30-minute pre-climb orientation. Entrance Fee: P175/person Foreigners: Peso equivalent of USD 15 Environmental Fee: P150/person Camping Fee: P100/person Outside the DENR Station, there are motorcycle or habal-habal drivers to bring you to Babadak Ranger Station (if your hike is via the Ambangeg Trail). Habal-habal Fee: P250/person Travel time: DENR Station to Babadak Ranger Station - Approx. 25-30 mins.",
+                    details2: "It’s highly recommended to do your hike around November to March, a season wherein there is less rain. This is common knowledge, but I feel the need to reiterate it because some hikers just seem like they’re going to elope given the number and size of their bags on this regular hike. Sure, that much packing and preparedness will help strengthen your chances of survival if you get lost in the mountain (let’s hope that doesn’t happen)… but for simple hikes such as this Mt Pulag hike, it’s best to contain yourself. And by that, I mean: just pack light and only the essentials. I considered myself to as out-of-shape back when I did this hike, but I managed with a medium-sized day pack (not even those hiking backpacks) and it all contained the things that I needed. I didn’t need a porter either (someone who could carry your things for you)."
+                },
+                { 
+                    name: "Mt. Pinatubo", 
+                    img: "pinatubo.png", 
+                    guide: "Mt. Pinatubo Travel Guide", 
+                    details: "Mount Pinatubo is an active volcano found in the Zambales Mountains on the northern island of Luzon and is part of the Luzon island arc chain at a complex intersection of micro-plates between the Eurasian and Philippine plate." , 
+                    howToGo: "The scenic Mt. Pinatubo, all 4,757 feet of it, is nestled between Zambales and Pampanga, making this destination ideal for weekend adventures like hiking near Manila. Below are several ways to reach its jumpoff point in Capas, Tarlac, which is only a few hours away from the Philippine capital. Public Transportation: Hop on a bus going to Capas, Tarlac via any major bus terminal in Manila, Cubao, or Pasay. It just depends on which is closest to where you are staying. You also have the option to ride buses with routes going to Baguio, Ilocos, or Pangasinan and tell the conductor you’re getting off at Sta. Juliana in Capas. Once there, you can choose to ride a tricycle or a jeepney as long as it’s going to Sta. Juliana Tourism. There you will have to pay necessary environmental fees, and then they will assist you in booking your 4x4 tours in the Philippines that will take you closer to the mountain. Private Vehicle: Driving to Capas, Tarlac will take a little over two hours from Manila. Make your way to NLEX, take the exit to SCTEX/Clark Airport. Exit toward Dolores, merge onto MacArthur Highway, and follow the road to Sta. Juliana Capas. ",
+                    details2: "fter an exhilarating time on your Mt. Pinatubo crater hike, take the chance to reward your body with a relaxing side-trip to the following nearby destinations. Pinatubo Spa Town: A must-visit after a long tiring day of trekking and braving the elements, this site lets you freshen up and relieve yourself of the ash you accumulated along the trail. Revitalize your aching muscles at the Pinatubo Spa, a stone's throw away from your drop-off point from the 4x4 jeep tours. Avail of its many soothing massages, especially of the volcanic spa services. Bury your tired body in warm volcanic ash and savor its healing qualities or try covering your skin with volcanic mud and feel the difference in your skin afterward. Just be sure to rehydrate and drink lots of water after the treatment. Pinatubo Spa Town also offers Filipino and Korean food options for you to enjoy. Bueno and Dolores Hot Springs: Take a quick side trip to the nearby Bueno and Dolores Hot Springs and feel those tense muscles relax as you take a dip in the hot, therapeutic waters of the natural hot spring. With water temperatures reaching almost 50°C, melt those aches and pains away. Two large pools nestle the naturally occurring hot spring. "
+                }
+            ],
+            Falls: [
+                { 
+                    name: "Pagsanjan Falls", 
+                    img: "pagsanjan.png", 
+                    guide: "Pagsanjan Falls Travel Guide", 
+                    details: "The Pagsanjan Falls is one of the most famous waterfalls in the Philippines accessible only by dugout canoe. As your boatman takes you upstream the sight of lush greenery and cliffs unfold. The first fall is 20 minutes away and at the second, main fall the water explodes from 70 feet above." , 
+                    howToGo: "You can visit this waterfall either via Cavinti or Pagsanjan. To get here via commute: From Manila, ride a bus going to Sta. Cruz, Laguna. (Cavinti route) Once in Sta. Cruz, ride a jeep bound for Cavinti (or a jeep bound for Lumban and then get off at Cavinti). Then charter a tricycle to Pueblo El Salvador Nature Park. (Pagsanjan route) Once in Sta. Cruz, ride a jeepney and get off at the Pagsanjan tourism office. Via Cavinti: The jump-off point at Cavinti is at Pueblo El Salvador Nature Park. Here you need to register and then pay the appropriate fees. You have to 2 options to reach the waterfall: Trekking. The trek going to the waterfall takes about 1 hour, and the trek back takes about 2 hours. Canoe ride. This involves a 30-minute trek and then a canoe ride to the waterfall. A popular option is to trek to the waterfall so you can experience the vertical rappels and ladders and then take the canoe on the way back. Via Pagsanjan: From Pagsanjan, you need to head to the tourism office for registration. Via this route, you will take a canoe ride (also called Shooting the Rapids) for 1 hour to reach the waterfall.",
+                    details2: "One of the most popular activities at Pagsanjan Falls is the boat ride. Visitors can rent a canoe and take a thrilling ride up the river to the falls. The two boatmen of every canoe try very hard to navigate the rapids and keep the canoe from tipping over. The upstream river trip is the point of the tour, and it is an unforgettable experience. The boat ride is a must-do activity for anyone visiting Pagsanjan Falls. Swimming: Swimming is another popular activity at Pagsanjan Falls. Visitors can take a dip in the cool and refreshing water of the falls. The water is crystal clear and perfect for swimming. However, visitors should be careful as some areas have deep water. It is recommended that visitors wear life jackets for safety. Photogaraphy: Pagsanjan Falls is a beautiful location and a great place for photography. Visitors can capture the scenic beauty of the falls, the lush greenery, and the wildlife. It is recommended that visitors bring a camera or a smartphone with a good camera to capture the moments. Visitors can also hire a photographer to take their pictures. Pagsanjan Falls offers a variety of activities for visitors to enjoy. The boat ride, swimming, and photography are just a few of the things visitors can do at the falls. Visitors can also enjoy the local cuisine and explore the surrounding areas. Pagsanjan Falls is a must-visit destination for anyone visiting the Philippines."
+                },
+                { 
+                    name: "Daranak Falls", 
+                    img: "daranak.png", 
+                    guide: "Daranak Falls Travel Guide", 
+                    details: "Daranak Falls is one of the most well-known waterfall attractions in Rizal. It sits on the foot of the Tanay mountains, which keeps the water flowing regardless of the season. In the summer time, it's a popular destination amongst locals thanks to its refreshing waters." , 
+                    howToGo: "You can take air-conditioned UV express (FX) shuttles or jeepneys to Tanay from a few points in the metro. The most straightforward routes are via Ortigas or Marikina. Ortigas Route: via Starmall EDSA-Shaw or EDSA Central Take a bus or the MRT to Shaw Boulevard Ride an FX or jeepney to Tanay (P50-70) Marikina Route: via Santolan Station Take the MRT to Santolan Station Ride an FX to Tanay (P70) If you’re coming from the north, you can go through Santolan. Otherwise, the Ortigas route is probably the most direct. From Antipolo to Tanay Santolan is not far from Antipolo, so this route is also a good option. In our case, we were already in Antipolo so we caught a bus on E. Rodriguez Ave heading southeast to Tanay. You can also catch a jeep from Antipolo to Tanay for P28. Our bus took just under an hour to get to Tanay. From Tanay to Daranak Falls From Tanay Public Market, you can hire a trike to take you all the way to the entrance of Daranak Falls. The trike will cost P200 each way and can carry up to 4 passengers. Pro Tip: Grab a bite to eat at one of the local eateries at the market in Tanay if you haven’t had the chance to pack your own food.",
+                    details2: "The entrance fee in Daranak Falls is 75 pesos per head. On the other hand, the entrance fee in Batlag Falls is 100 pesos per head for adults and 50 pesos per head for kids. Bringing any alcoholic drinks inside the falls is prohibited by the management.There’s no need for any reservation because walk-in is allowed in Daranak Falls but make sure to arrive early in the morning. The parking fee is 50 pesos and after parking your car, you have a short walk going to the falls. The picnic shed with umbrella cost 300 pesos while the picnic table is around 200 pesos. On the other hand, pitching a tent is 200 pesos while a pictorial or prenup session cost 1500 pesos. Bringing a tent is allowed and you can do it overnight at Batlag Falls which is situated at the top of Daranak Falls and it’s a walking distance only. Renting a cottage or a picnic table to put your important belongings cost 200 to 300 pesos.  Bring your food and water if you have a low budget for travel because the price of food there is so expensive. If you want to take a dip and enjoy the water but cannot swim, you don’t need to worry because they offer a life vest or large floating inner tube device which you can rent for a minimal amount in the stalls. Renting a life vest cost 50 pesos per head while renting a salbabida costs the same which is 50 pesos per head. Daranak Falls is every day open to tourists (Monday to Sunday) which starts from 8 am opening hours up to 5 pm. Flying a drone in the vicinity of the falls is strictly prohibited by the management. So if you’re a content creator don’t bring any drones with you."
+                }
+            ],
+
+            Historical: [
+                { 
+                    name: "Casa Manila", 
+                    img: "casamanila.png", 
+                    guide: "Casa Manila Travel Guide", 
+                    details: "Casa Manila is a town on the north coast of Luzon Island, in the Philippines. Resorts line the long stretch of Saud Beach, on the wide sweep of Bangui Bay. The towering Bangui Windmills wind turbines are arrayed in a row along the coast. East of town, Pasaleng Bay is home to Bantay Abot Cave, a natural tunnel eroded through the headland, and secluded Maira-ira Beach." , 
+                    howToGo: "Wondering how to get to Casa Manila, Philippines? Moovit helps you find the best way to get to Casa Manila with step-by-step directions from the nearest public transit station. Moovit provides free maps and live directions to help you navigate through your city. View schedules, routes, timetables, and find out how long does it take to get to Casa Manila in real time. Looking for the nearest stop or station to Casa Manila? Check out this list of stops closest to your destination: Andres Soriano Jr Ave / Muralla Intersection; Padre Burgos St / Anda Intersection; Juan Luna Monument; Bonifacio Dr; Railroad Dr; Anda Circle; Bonifacio Drive; Taft Ave; Carriedo Lrt; Recto Lrt. Want to see if there’s another route that gets you there at an earlier time? Moovit helps you find alternative routes or times. Get directions from and directions to Casa Manila easily from the Moovit App or Website. We make riding to Casa Manila easy, which is why over 1.5 million users, including users in Manila, trust Moovit as the best app for public transit. You don’t need to download an individual bus app or train app, Moovit is your all-in-one transit app that helps you find the best bus time or train time available. For information on prices of bus and train, costs and ride fares to Casa Manila, please check the Moovit app. Use the app to navigate to popular places including to the airport, hospital, stadium, grocery store, mall, coffee shop, school, college, and university. Casa Manila Address: Intramuros street in Manila",
+                    details2: "Casa Manila is one of the most popular tourist spots in Intramuros. It’s opposite the San Agustin Church and is a replica of Spanish colonial mansion of 19th century Manila. It recreates the rich merchant’s way during the Spanish colonization, showcasing period furniture coming from Chinese, European, and Philippine origins. There are a total of 3 floors inside the area. On the ground floor, you’ll see the main entry gate called Puerta Principal. It is made of heavy wood. Upon opening, you’ll see the corridor called Zaguan in which carriages, more called as carruajes, can proceed to the PATIO and deposit their passengers. The patio of Casa Manila has a granite pavement surrounded with beautiful flowers. It also has a big fountain and windows creating sunlight. You can also see the stable or Caballariza, where the owner’s carriages were parked. It’s a sign of luxury, and having a bigger carriage means having a higher social status. On the first floor, you can see the office or Oficina, library or Biblioteca, and safe or Caja de Hiero wherein important things were kept. You can also see some of the bedrooms here. Also known as Dormitorios, the rooms here are only used for siesta time. Lastly, on the third floor, you’ll see the anteroom or Antesala, where the families take their snacks or merienda, play games and smoke. Next room is the living room, or also known as the Sala. It’s made of hardwood with a spacious floor. Windows were kept open to block the sunlight and to allow the free flow of fresh air. There’s also a prayer room or Oratorio for the Catholic family and bedrooms for the complete family."
+                },
+                { 
+                    name: "Vigan", 
+                    img: "vigan.png", 
+                    guide: "Vigan Travel Guide", 
+                    details: "Vigan is primarily famous for its splendid beaches, coral reefs teeming with marine life and exquisite dive sites. The region was declared a Marine Reserve by the United Nations in 1974, owing to its abundance of exotic fish species seldom seen elsewhere." , 
+                    howToGo: "Depending on your transportation budget and available time, there are commonly two options to reach Vigan City: land travel and plane. Manila, the capital of the Philippines, is the main jumpoff point of travelers. Here we list down the ways on how to go to Vigan City if you’re coming from Manila and other points in Luzon: By Bus Buses are the cheapest way to travel to Vigan. There are many bus lines to choose from, but their prices do not differ that much from one another. However, expect the more premium rides like that from Partas Bus in Cubao and Fariñas Transit in Pasay that come with Wi-Fi, TV, and the toilet to be on a higher tier. Tickets can be booked in advance. Partas, Dominion Bus Lines, Viron Transit, and St. Joseph/Aniceto Transit have direct trips to Vigan daily, while Philippine Rabbit Bus Line, Fariñas, Maria de Leon, Florida, Baliwag, and RCJ Transit have regular trips that pass by Vigan via the Manila-Laoag route. If you want to save more time and money, go for an overnight ride. There’s less road congestion, and you won’t need accommodation for the night.  For those coming from the following locations in North Luzon, here are some suggested ways to get to Vigan: From Clark International Airport in Pampanga – Take the shuttle service or a taxi to Dau Bus Terminal where you can ride a bus for Vigan. Travel will take 7 to 9 hours. From Baguio – Take buses to Laoag and get off in Vigan. The travel time is around 5 hours. From Abra/Tuguegarao – GMW and Florida Liner bus lines have trips that stop in Vigan. By Private Car/Van From Manila, Vigan-bound vehicles, both public buses, and private cars should take the North Luzon Expressway (NLEX), Subic-Clark-Tarlac Expressway (SCTEX), and Tarlac-Pangasinan-La Union Expressway (TPLEX) route.",
+                    details2: "Walking is a great way to explore Calle Crisologo, as there is little to no vehicular traffic (except for the kalesas that are allowed). You can go inside some of the houses, which have been restored or turned into souvenir shops, hotels, or restaurants. Most of them still maintain the old-world charm through red-tiled roofs, decorative doors, high ceilings, and capiz windows. Do stay until nighttime when the lamps along the street are lit, and tables are set up for dining, as it gets more charming and a tad romantic. If you want an extra flair of colonial style, visit the Ilocos Sur Provincial Tourism Office. Here you can rent a filipiniana or barong (traditional Filipino costumes) to authentically exude that era’s style as you walk through Calle Crisologo. Nearby Calle Crisologo is Plaza Salcedo, Vigan's main square and gathering point. At night, it's an audio-visual spectacle thanks to a dancing fountain light show. Be at the Plaza Salcedo before 7:00 P.M. on weekdays to witness this 30-minute show that synchronizes the spouting of the water fountain to colorful lights and infectious music. On weekends, there is a second show at 8:30 P.M. It is located in the main square of the city. Also known as the Metropolitan Cathedral of the Conversion of St. Paul, it was founded in the 17th century, and is one of the oldest Augustinian churches in the Philippines. It boasts of a modified Baroque architecture, made by the Ilocanos to withstand earthquakes. The church has also gone through many disasters but has been restored."
+                }
+            ]
+        };
+
+        // Generate content dynamically
+        const destinationList = document.getElementById('destination-list');
+        if (destinations[category]) {
+            destinations[category].forEach((place) => {
+                const item = document.createElement('div');
+                item.className = 'destination-item';
+                item.innerHTML = `
+                    <img src="image/${place.img}" alt="${place.name}">
+                    <h3>${place.name}</h3>
+                    <p>${place.details}</p>
+                    
+                `;
+                const button = document.createElement('button');
+                button.innerText = 'Travel Guide';
+
+                // Set the button's onclick handler
+                button.onclick = () => {
+                    const url = `travel-guide.html?region=Luzon&category=${category}&guide=${encodeURIComponent(place.guide)}&name=${encodeURIComponent(place.name)}&howToGo=${encodeURIComponent(place.howToGo)}&details2=${encodeURIComponent(place.details2)}`;
+                    location.href = url;
+                };
+
+                item.appendChild(button); // Add the button to the destination item
+                destinationList.appendChild(item); // Add the item to the destination list
+            });
+        } else {
+            destinationList.innerHTML = "<p>No destinations available for this category.</p>";
+        }
+        
+    </script>
+</body>
+</html>

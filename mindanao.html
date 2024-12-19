@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindanao - Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+            <span>Travel Blog</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#trend">Trend</a></li>
+            <li class="dropdown">
+                <a href="#destination">Island Destination</a>
+                <ul class="dropdown-menu">
+                    <li>Luzon
+                        <ul>
+                            <li><a href="luzon.html?category=Beach">Beach</a></li>
+                            <li><a href="luzon.html?category=Hiking">Hiking</a></li>
+                            <li><a href="luzon.html?category=Falls">Falls</a></li>
+                            <li><a href="luzon.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Visayas
+                        <ul>
+                            <li><a href="visayas.html?category=Beach">Beach</a></li>
+                            <li><a href="visayas.html?category=Hiking">Hiking</a></li>
+                            <li><a href="visayas.html?category=Falls">Falls</a></li>
+                            <li><a href="visayas.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Mindanao
+                        <ul>
+                            <li><a href="mindanao.html?category=Beach">Beach</a></li>
+                            <li><a href="mindanao.html?category=Hiking">Hiking</a></li>
+                            <li><a href="mindanao.html?category=Falls">Falls</a></li>
+                            <li><a href="mindanao.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <section id="content">
+        <h1 id="region-title">Mindanao - <span id="category-title"></span></h1>
+        <div id="destination-list" class="destination-gallery">
+            <!-- JavaScript will dynamically insert content here -->
+        </div>
+    </section>
+
+    <script>
+        // Get the category from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+
+        // Update the page title dynamically
+        document.getElementById('category-title').innerText = category;
+
+        // Define destinations for Visayas with additional details
+        const destinations = {
+            Beach: [
+                { 
+                    name: "Samal", 
+                    img: "samal.png", 
+                    guide: "Samal Travel Guide", 
+                    details: "Samal is the only city in the country that encompasses two entire islands, hence its name the Island Garden City. While pristine beaches dot the island's shores, hills dominate the middle portions of the island. Talikud Island is located southwest of the main island." ,
+                    howToGo: "Since Samal Island doesn't have its own airport, the main jump-off point is Davao City. Here are some ways on how to get to Samal Island via Davao City. By Flights: The closest airport to Samal Island is the Davao International Airport or Francisco Bangoy International Airport so the most convenient option is to take a flight to Davao. Airlines such as Philippine Airlines, Cebu Pacific, and Air Asia fly numerous times daily to Davao City from several cities across the country. For those coming from Luzon, you can take a  Manila to Davao flight. Meanwhile, those from Visayas can catch a Cebu to Davao flight, Bohol to Davao flight, or Bacolod to Davao flight. Travelers already in Mindanao can opt for a Cagayan to Davao flight or Zamboanga to Davao flight, among others.  There are also flights flying to Davao City from international destinations like Singapore, Doha, Hong Kong, and Quanzhou, China. By Ferry: From Davao City, take two connecting jeepney rides or book a transfer going to Sta. Ana Wharf. From there, take the Palboros passenger ferry boat going to Kaputian Beach in Samal Island. The boat trip lasts 40 minutes. By Bus: Island City Express is the lone bus line that services the route of Davao City and Samal Island. Your bus fare is already inclusive of the ferry fee. You can take this bus from Agdao in Davao City going to Sasa Wharf. The bus is then loaded into the ferry as a RORO (Roll-on, roll-off) transport going to Samal Island.",
+                    details2: "Make the most of your trip in Samal Island by adding these tourist spots and activities in your itinerary: Explore the Island on a Motorcycle Like most small islands in the Philippines, Samal Island is best explored on a two-wheel ride. To fully explore the island you can either rent a motorcycle or hire a habal-habal driver to take you around. Samal Island has a smooth road infrastructure that connects most towns and circles almost the whole island. Explore Monfort Bat Cave: At Monfort Bat Cave, you will get the chance to see up close thousands of fruit-eating bats in their natural habitat. Don't worry, because you will be visiting during the daytime, you will witness these countless bats going about their daily routine–which is sleeping soundly. The sight of bats hanging from the cave's ceilings and walls is quite a magnificent scene. Go Spelunking:  Aside from the Monfort Bat Cave, you can still relive your inner Indian Jones by exploring the other cave systems found in Samal Island. Caves such as Baga, Magongawong, and Balete all feature stunning series of chambers dotted with spectacular stalactite and stalagmite formations. Even if you are traveling on a budget, you can still set foot on this luxurious resort known all over the world for a day. Pearl Farm offers a day tour for visitors to Samal Island and is usually included in island hopping tours. You can check out the resort's facilities and enjoy frolicking at their white sand beach and swim on its turquoise-colored waters. Other activities you can do here include jet-skiing, banana boat, diving, and kayaking."
+                },
+                { 
+                    name: "Magpupungko", 
+                    img: "magpupungko.png", 
+                    guide: "Magpupungko Travel Guide", 
+                    details: "Magpupungko Beach is a blissful place in Siargao that is known for its rock formations, white-sand beach and crystal clear blue waters. Visitors will surely have a great time bumming on its wide stretch while gazing at its charming surroundings. The beach area is filled with several eateries and food stalls that offer a good variety of local dishes." ,
+                    howToGo: "When I visited in 2017 there was only one flight a day from Manila and one from Cebu. Now there are 10-15 flights a day so the question of how to get to Siargao has become much easier. Without going into deep detail on every single option. These are the options for how to get to Siargao: Fly from Manila $90-$100 Fry from Cebu  $90-$100 Ferry from Surigao City to Siargao Island $5 There are ferries that leave from Manila and Cebu but they go to Surigao City first and then Siargao Island. On our second day in Siargao, my friends and I set out to explore Magpupungko Rock Pools in Pilar, about an hour’s drive from General Luna. Many travelers rent motorcycles (around 500 pesos per day) and make the trip independently. Since we weren’t familiar with the route, we asked the local who guided us to Bucas Grande on our first day to help us out. After a quick negotiation that morning, we agreed to rent an additional motorcycle for our group of three. If you prefer not to drive yourself, land transfers to Magpupungko Rock Pools are easily available. You can arrange them through locals or book online with several tour providers who offer guided trips. Either way, getting to this stunning natural attraction is straightforward. Here are some of the tours to choose from online:",
+                    details2: "Cliff-Jumpin: It is a bit tricky to climb the rock, but anyone gutsy can definitely do it. The water is refreshing and Magpupungko’s cliff-jumping will give you an adrenaline rush. Snorkeling: If you don’t want to jump off the cliffs, you can go snorkeling instead. The tide pools are teeming with little fish. It is a great way to relax and appreciate the pool from a different perspectives. I mean, we always see drone photos of the pool, but underwater is equally interesting. Enjoy some food by the beach:  After a few hours of Magpupungko fun, you will definitely get hungry. Worry not because there are several restaurants and food stalls by the beach. You can enjoy some fresh seafood while overlooking the beautiful ocean. Lounge on the beach: If you’re not up for any Magpupungko activity, you can just lounge on the beach and enjoy the view. It is a great place to relax and unwind. There are also several hammocks where you can take a nap. Around the rock pools are various small caves to explore and bare hills to climb, albeit rocky. The most famous rock formation on the coast, apart from the pools, is the large boulder that perilously rests on a flat stone. This limestone boulder resembles the shape of squatting, which in the Surigaonon dialect is pungko.   When you wander through the Magpupungko rock pools past the boulder, you will find yourself in a different secluded beach. When dry, the sand is soft, into which the feet sink easily with every step."
+                }
+            ],
+            Hiking: [
+                { 
+                    name: "Mt. Apo", 
+                    img: "apo.png", 
+                    guide: "Mt. Apo Travel Guide", 
+                    details: "Mount Apo, active volcano, south central Mindanao, 20 miles (32 km) west of Davao City; it is the highest point in the Philippines, rising to 9,692 feet (2,954 metres). Part of the Cordillera Central, it is covered by a forest of tall, tropical hardwoods; two subsidiary peaks nearly match its height.",
+                    howToGo: "Davao is well connected to both Manila and Cebu City, the two busiest international airports in the Philippines. Cebu Pacific Air, the local low-cost carrier with a new and modern fleet, offer cheap daily flights from both Manila and Cebu starting at less than 2000 pesos (one-way). I flied from Cebu City and paid 2500 pesos (one-way), and back to Cebu City for 1800 pesos only (one-way). One can either stay a night in Davao City or go directly to Santa Cruz (45 km southwest of Davao), where a permit and guide/porter for Mount Apo must be arranged. After arriving Davao International Airport, try to avoid the taxi-touts at the entrance/exit who will try to charge 1500 pesos for a ride to Santa Cruz. Walk instead 50 metres from the terminal, where the white or yellow metred-taxis are. Here you can easily negotiate a price of 600-700 pesos. If you are on a really tight budget it will be even cheaper to commute like described below (total 207 pesos): 1. After arriving at Davao International Airport, ride a taxi to Ecoland Transport Terminal (travel time 20 minutes - 150 pesos) 2. At Ecoland Terminal, look for south-bound buses such as yellow bus, weena bus, ACFB or Metro Shuttle and ask the driver or the conductor that you will be dropped off at Santa Cruz Terminal (travel time 45 minutes to 1 hour - 43 pesos). 3. At Santa Cruz Terminal, take a motorcycle or tricycle taxi to the municipal hall, Tourism Office (travel time 5 minutes - 14 pesos) To get from Santa Cruz to the trailhead in Baruring you can hire a jeep for 800 pesos or commute. The latter would be cheaper, 3 persons would cost 400+ pesos, but the time-frame would be more uncertain. While a jeep will take 1-1.5 hours to the trailhead in Baruring, commuting will take at least 2-3 hours depending on availability/departure of share-taxis, motorcycle taxis etc. First you need a bus from Santa Cruz to Digos, then a shared van/taxi from Digos to Kapatagan, and finally a motorcycle-taxi from Kapatagan to Baruring. This will be quite complicated and time-consuming, but at least you have your guide to take care of this.",
+                    details2: "Hiking and Camping Gears: Before we buy our hiking and camping gear, we make sure to do research or ask for guidance from people who have been in this activity for a while. The husband spent hours doing research for our hiking bag, sleeping bag, jackets (rain, down, and fleece), and shoes. It’s also a good thing that we are surrounded by outdoor friends whom we bother with questions every now and then. (Shout out to Andrew, Mark, Beboy, and Aldrich). Below are our companion’s things to bring to Mt. Apo. The author of this blog is mountaineer for more than a decade, a surfer for more than 7 years and created the Telecommunications Ecological and Adventure Klab ( TEAK) in Davao City. His active lifestyle and adventures lead him to the beautiful wonders and views of his country such as mountains, waterfalls, white beaches in its natural state and the rich culture of the people especially in Davao Province where Mt. Apo is situated in which he photographs and documents each and every one of them. As time goes by his adventures extends around Asia where he went to Nepal and did the Annapurna Circuit, visited Sabah and trekked Mt. Kinabalu and Mt. Rinjani in Lombok, Indonesia. On these travels, he met local people in their respective areas and established contact with them and shares his experiences through photo documentation to others. Sharing his personal experience, he wants to go back to places where he went and share it with others and explore further. Emergency Hiking and Camping Items Nature is unpredictable so it is always better to be ready for what is coming. These are items that we are happy not to be able to use but are good things to have while on the trek."
+                },
+                { 
+                    name: "3003 Steps to Linabo Peak", 
+                    img: "steplinabo.png", 
+                    guide: "3003 Steps to Linabo Peak Travel Guide", 
+                    details: "There are indeed 3,003 concrete steps all the way up Linabo Peak. Along the way are 16 stations of the cross depicting scenes from the life of Jesus. The steps are hugely popular during Holy week, when thousands of locals make the climb up." ,
+                    howToGo: "Car: If you're driving from Zamboanga City, take the National Road (also known as the Zamboanga-Dipolog Road) heading north. The journey will take approximately 5-6 hours. Once you arrive in Dipolog City, follow the signs to Linabo Peak. You will need to park in the designated area near the base of the 3003 Steps. Be prepared to pay a small parking fee, typically around 20-50 PHP. Public Transportation (Bus): From Zamboanga City, head to the bus terminal and take a bus bound for Dipolog City. The fare is usually around 300-400 PHP. The bus ride will take about 6-7 hours. Once you arrive at the Dipolog City bus terminal, you can take a tricycle to the base of the 3003 Steps Linabo Peak. The tricycle fare will be approximately 50-100 PHP. Tricycle: After reaching the Dipolog City bus terminal, hire a tricycle to take you to the starting point of the 3003 Steps Linabo Peak. The journey should take about 15-20 minutes, depending on traffic. Make sure to negotiate the fare beforehand, which should be around 50-100 PHP. Hiking: Once you arrive at the base of the 3003 Steps Linabo Peak, prepare for a hike. The trail is well-marked, and it is advisable to start your hike early in the morning to avoid the heat. The climb consists of 3003 steps, and it can take about 1-2 hours to reach the top, depending on your pace. Ensure you bring enough water and wear appropriate hiking gear.",
+                    details2: "During Holy Week, especially on Good Friday, Catholics in the whole province of Zamboanga del Norte perform their penitential rites in “Katkat Sakripisyo”. On the way up, there are 14 stops which correspond to the Station of the Cross. There’s a novena on Good Friday that starts at 4AM and followed by a mass at the elementary school which is located on top of the peak. It is the most visited place in the city. Thousands of devotees which range from children to adults will be usually seen in the place but most of them are teenagers. When you reach the peak, you will be rewarded by the beautiful scenery of the two cities of Zamboanga del Norte, Dipolog and Dapitan. The air above the ground is so refreshing that dries away your sweat. Taking a break at the peak and having some picnic is also great to do before going down. You can also checkout the towers of some cellular sites that are situated at the peak. There are 2 routes to reach the peak, the one with the cemented steps and the other one with a longer route. I would suggest that when going up, you take the cemented steps. Take the longer route and enjoy the nice spots on the other side of the peak on going down the peak. Just make sure you will ask the locals the right way."
+                }
+            ],
+            Falls: [
+                { 
+                    name: "Tinuy-an Falls", 
+                    img: "tinuyan.png", 
+                    guide: "Tinuy-an Falls Travel Guide", 
+                    details: "Tinuy-an is a white water curtain that flows in three levels (with a fourth tier hidden from view) and is said to be the widest waterfall in the Philippines. Every morning, the area shows a rainbow between 9 a.m. to 11 a.m. One may also ride a raft to get close to its cascades and get a water “massage.”",
+                    howToGo: "It should be noted that we contacted a travel guide/ habal-habal driver in Hinatuan for our trip in Surigao del Sur. We have arranged the itinerary for both Enchanted River and Tinuy-an Falls for a single day. If you’re going to come from Butuan, it’s better to stay overnight in Hinatuan or Bislig because traveling from Agusan del Norte can take about 5 hours or more. You won’t be able to enjoy the Tinuy-an if you’re in the rush. It’s best to contact a guide when you go here especially when you have limited time in your travel. You can arrange with him (or her) your itinerary when you visit. You can always choose to stay in Tinuy-an Falls for a whole day (as there are many activities you can do here including swimming, trekking, bird watching and wildlife or landscape photography), but if you’re pressed with time, it’s okay if you’ll just stay here for a half day. If you went to the province of Surigao del Sur using your car, you can easily drive your car going here. Tinuy-an Falls can be located via Google Maps, which we have tried while going here. It’s best to visit in the morning. You’d want to have good lighting when you’re going to take pictures of the falls!",
+                    details2: "To swim in the water basin of Tinuy-an Falls, it’s mandatory for everyone to wear a life vest or life jacket, available for rent at a fee of P30. This regulation is enforced by local tourism offices to prevent accidents. Enjoy the crystal-clear and cold waters of Tinuy-an Falls while adhering to safety guidelines. For added assistance and local insights, consider hiring a local guide to accompany you and provide essential tips for your visit to Tinuy-an Falls. Bamboo rafts that will take you to the curtain of waters running to its basin. Make your Tinuy-an Falls experience truly memorable by taking a bamboo raft closer to the waterfall’s curtain of water. This unique vantage point allows you to enjoy the waterfall’s beauty up close. For a natural waterfall massage, head to the second and third levels of Tinuy-an Falls, where you can lean against the rocks and let the cascading water massage your back, creating a soothing and relaxing experience."
+                },
+                { 
+                    name: "Aliwagwag Falls", 
+                    img: "aliwagwag.png", 
+                    guide: "Aliwagwag Falls Travel Guide", 
+                    details: "Aliwagwag Falls, known as one of Davao Oriental's most visited natural attractions, is a series of more or less a hundred cascading falls. Just like a stairway with various heights in between steps, ranging from 7ft to 110 ft tall and the highest cascades are about 66 ft to 72 ft tall.",
+                    howToGo: "Like most destinations in Mindanao, travellers to Aliwagwag Falls have two choices: taking the public transport or renting a vehicle. If you choose to commute, a bus ride from the city airport heading to Cateel is available for you. There is only a single trip daily so you have to arrive there early to secure a seat. Getting there will take you at least 7 hours and another 30-minute “habal-habal” or motorcycle ride to reach Aliwagwag from the town proper. Renting a car, of course, will cut the travel time and you can drive at any time of your choosing through Compostela Valley Road or Matti Road, which will take you to Aliwagwag much faster. Whether you plan on going on the trip alone or with the company of friends or family, Car Rental Davao has all the available units for you. Everything you need — whether it’s a sedan, SUV or van — we have it for you and we promise them to be high-quality but cheap rental cars. We can also make a special arrangement for you such as delivering your chosen unit to your preferred location or have it delivered to the airport upon your arrival. Also, if you’re thinking about staying longer and reserving our unit, we can also offer you a special car rental deal.",
+                    details2: "Sightseeing: Nature has a way of healing our souls. Just being there and living for the moment, while enjoying the majestic lowland forest view and the sound of cascading waters, is therapeutic enough. If you are looking for a moment of tranquillity and relaxation, then a trip to Aliwagwag Falls is perfect for you. The soothing ambiance and breathtaking beauty of this natural wonder will rejuvenate your spirit. Swimming: Take a dip in the falls and experience how refreshing it is, all while enjoying a panoramic view of the entire site. A designated swimming area is available for adults, and there’s also one for kids, so take note of that as they are very particular here. It’s important to never go beyond the designated area, as it could be very dangerous due to the rapids. We don’t want any hassle, right? Additionally, following the safety guidelines ensures a worry-free and enjoyable visit. Zip-lining: If you are looking for an adrenaline-fueled activity, then zip-lining is a good choice for you. Have a 360-degree view of the Aliwagwag Falls and its surrounding mossy forest by taking this 680-meter long, 55-meter high zip line. The experience offers an exhilarating rush as you soar over the breathtaking landscape. It’s available for only P200, making it an affordable and thrilling adventure. Crossing the Monkey Bridge:  If zip-lining isn’t enough excitement for you, take on the challenge of crossing the 45-meter-long Monkey Bridge. This thrilling obstacle, requiring you to crawl over a thin rope, adds an extra layer of adventure to your visit. For a complete experience, make sure to wear trekking shorts and sturdy sandals or shoes. Combining this activity with zip-lining not only maximizes the thrill but also offers a discounted rate. Purchase both tickets together for just P225, instead of buying them separately. Picnicking: Indulge in a picturesque picnic surrounded by lush greenery and the sounds of nature. Picnic cottages are available in the area for a minimal fee, offering the perfect setting for a relaxing outdoor meal. If you find yourself without snacks or refreshments, the canteen at Aliwagwag Falls Eco Park has you covered."
+                }
+            ],
+            Historical: [
+                { 
+                    name: "Fort Pillar", 
+                    img: "fortpilar.png", 
+                    guide: "Fort Pillar Travel Guide", 
+                    details: "Fort Pilar is a 17th century military defense fortress built by the spanish colonial government in zamboanga city. outside the wall is an outdoor shrine dedicated to our Lady of Pilar. This is a major landmark of the city and symbol of its rich cultural heritage.",
+                    howToGo: "Walking: If you are already at Fort Pilar, you can easily walk to the Fort Pilar Parking Lot. Start by heading towards the main entrance of Fort Pilar. Once you exit the fort, turn left onto the main road. Continue walking straight for approximately 5 minutes. You will pass a small market on your right. The parking lot is located just ahead, on your left side, marked by a sign. It is a well-known spot among locals. Tricycle: For a faster option, you can take a tricycle from Fort Pilar to the Fort Pilar Parking Lot. Look for a tricycle station near the entrance of the fort. Inform the driver that you want to go to the Fort Pilar Parking Lot. The fare should be around 10 to 15 PHP per person. The ride will take about 3 to 5 minutes, depending on traffic. Make sure to have small bills, as drivers may not have change for larger denominations. Motorcycle Taxi (Habalan): Another option is to use a motorcycle taxi, known locally as 'habal-habal.' You can find them near Fort Pilar. Approach a driver and request a ride to the Fort Pilar Parking Lot. The fare typically ranges from 20 to 30 PHP, depending on your negotiation skills. This method is quicker than walking or taking a tricycle, taking only about 2 to 3 minutes to reach your destination.",
+                    details2: "Fort Pilar, or Real Fuerza de Nuestra Señora del Pilar de Zaragoza, is a cultural and historical gem located in Zamboanga City, Philippines. This 17th-century military defense fortress was built by the Spanish to protect the city from pirate attacks and has since become a symbol of Zamboanga's rich heritage. The fort's well-preserved walls and bastions offer a glimpse into the colonial past, making it a must-visit for history enthusiasts. Today, Fort Pilar is more than just a historical site; it serves as a beacon of faith and reverence. The fort houses a revered Marian shrine dedicated to Our Lady of the Pillar, the city's patroness. Locals and tourists alike visit the shrine to offer prayers and light candles, adding a spiritual dimension to your visit. The open-air chapel attached to the fort is a serene spot where one can reflect amidst the backdrop of ancient stone walls and lush gardens. Adjacent to the fort is the National Museum of Zamboanga, where you can explore a fascinating collection of artifacts, artworks, and exhibits that narrate the rich tapestry of the region's history and culture. As you stroll through the museum, you'll find yourself immersed in stories of the past, from pre-colonial times to the present day. Fort Pilar is not just a landmark; it's a living testament to the resilience and spirit of the people of Zamboanga. Fort Pilar in Zamboanga City is a historic fortress that offers visitors a glimpse into the city's rich cultural heritage. Built by the Spanish in the 17th century, the fort showcases architectural marvels, including a shrine to the city's patron saint, the Virgen del Pilar. Surrounding the fort are lush gardens and a museum that houses artifacts and exhibits detailing the city's history and traditions. Visitors can also witness traditional dances and performances by local artists, providing an immersive experience into Zamboanga's vibrant culture."
+                },
+                { 
+                    name: "Rizal Shrine", 
+                    img: "rizalshrine.png", 
+                    guide: "Rizal Shrine Travel Guide", 
+                    details: "The Rizal Shrine, also known as the Museo ni José Rizal Fort Santiago ( transl. Museum of Jose Rizal in Fort Santiago), is a museum dedicated to the lifework of José Rizal. It is located inside Fort Santiago in Intramuros, Manila, Philippines, beside the Plaza de Armas." ,
+                    howToGo: "Walking: If you are staying in the Intramuros area, you can easily walk to Rizal Shrine. From the Manila Cathedral, head southeast on Beaterio Street. Continue straight until you reach General Luna Street. Turn left onto General Luna Street, and you will find Fort Santiago, where the Rizal Shrine is located. Jeepney: You can take a jeepney from various parts of Manila. Look for jeepneys that have 'Intramuros' or 'Bambang' as their destination. Board the jeepney and pay the fare (around PHP 10-15). Ask the driver to drop you off near Fort Santiago. Once you get off, walk towards General Luna Street, and you will see the entrance to Fort Santiago where Rizal Shrine is located. LRT (Light Rail Transit):  Take the LRT Line 1 (Yellow Line) and get off at the Central Terminal station. From there, exit the station and head towards the Manila Post Office. You can either walk (approximately 20 minutes) or take a short jeepney ride to Intramuros. If walking, proceed to the west along the road until you reach the walls of Intramuros. Enter through the nearest gate and head towards Fort Santiago, where the Rizal Shrine is located. Taxi or Ride-Hailing Service: You can book a taxi or a ride-hailing service like Grab. Simply input 'Rizal Shrine, Fort Santiago, Intramuros' as your destination. The driver will take you directly to the entrance of Fort Santiago, where the Rizal Shrine is located. Ensure to check for traffic conditions as it can vary throughout the day.",
+                    details2: "As you explore, don't miss the opportunity to engage with knowledgeable guides who can provide deeper insights into Rizal's philosophies and the socio-political climate of his time. The Rizal Shrine is not just a museum; it is a powerful reminder of the sacrifices made for freedom and the enduring legacy of one man’s dream for his country. Whether you are a history buff or a casual visitor, the shrine promises a memorable experience that enriches your understanding of Philippine heritage and culture. With Rizal's original belongings kept intact inside the shrine, visitors can roam the house freely. Original and relevant trivia are written on the walls and the rooms are carefully reconstructed and presented the way they used to be when José Rizal used to live there, in the late 1800s. Visitors can explore other key structures within the shrine's grounds. These include the gallery, where some of Rizal's manuscripts, clothes, and even surgical instruments are showcased, offering insight into his various talents and interests. Additionally, a library and audio-visual room provide opportunities to delve further into his life and the historical context of his time. The shrine has a large lawn with a replica of a nipa hut Rizal used to play with his sisters in. Next to the hut is a statue of a young José Rizal, with his dog. This statue was constructed in 1996 for the centennial celebration commemorating Rizal's death."
+                }
+            ]
+        };
+
+        // Generate content dynamically
+        const destinationList = document.getElementById('destination-list');
+        if (destinations[category]) {
+            destinations[category].forEach((place) => {
+                const item = document.createElement('div');
+                item.className = 'destination-item';
+                item.innerHTML = `
+                    <img src="image/${place.img}" alt="${place.name}">
+                    <h3>${place.name}</h3>
+                    <p>${place.details}</p>
+                   
+                `;
+                const button = document.createElement('button');
+    button.innerText = 'Travel Guide';
+
+    // Set the button's onclick handler
+    button.onclick = () => {
+        const url = `travel-guide.html?region=Luzon&category=${category}&guide=${place.guide}&howToGo=${encodeURIComponent(place.howToGo)}&details2=${encodeURIComponent(place.details2)}`;
+        location.href = url;
+    };
+
+    item.appendChild(button); // Add the button to the destination item
+    destinationList.appendChild(item); // Add the item to the destination list
+            });
+        } else {
+            destinationList.innerHTML = "<p>No destinations available for this category.</p>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+            <span>Pearl of Asia</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#trend">Trend</a></li>
+            <li class="dropdown">
+                <a href="#destination">Island Destination</a>
+                <ul class="dropdown-menu">
+                    <li>Luzon
+                        <ul>
+                            <li><a href="luzon.html?category=Beach">Beach</a></li>
+                            <li><a href="luzon.html?category=Hiking">Hiking</a></li>
+                            <li><a href="luzon.html?category=Falls">Falls</a></li>
+                            <li><a href="luzon.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Visayas
+                        <ul>
+                            <li><a href="visayas.html?category=Beach">Beach</a></li>
+                            <li><a href="visayas.html?category=Hiking">Hiking</a></li>
+                            <li><a href="visayas.html?category=Falls">Falls</a></li>
+                            <li><a href="visayas.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Mindanao
+                        <ul>
+                            <li><a href="mindanao.html?category=Beach">Beach</a></li>
+                            <li><a href="mindanao.html?category=Hiking">Hiking</a></li>
+                            <li><a href="mindanao.html?category=Falls">Falls</a></li>
+                            <li><a href="mindanao.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="image/intro.mp4" type="video/mp4">
+                
+            </video>
+            <div class="video-overlay">
+                <h1>DISCOVER & EXPLORE</h1>
+                <p>Featuring beautiful destinations, new experiences, and hidden places around the Philippines destinations across Luzon, Visayas, and Mindanao.</p>
+            </div>
+        </div>
+        <div class="home-gallery">
+            <div class="image" onclick="showDetails('Destination 1')">
+                <img src="image/philippinesmanila.png" alt="Home Image 1">
+            </div>
+            <div class="image" onclick="showDetails('Destination 2')">
+                <img src="image/philippinescebu.png" alt="Home Image 2">
+            </div>
+            <div class="image" onclick="showDetails('Destination 3')">
+                <img src="image/philippinesdavao.png" alt="Home Image 3">
+            </div>
+        </div>
+        <div class="description">
+            <p>The Philippines is located in Southeast Asia, on the eastern rim of the Asiatic Mediterranean. It is bounded in the west by the South China Sea; in the east by the Pacific Ocean; in the south by the Sulu and Celebes Seas; and in the north by the Bashi Channel.  Its capital and main port of entry is Manila. Cebu, which is some 562 kilometers to the south of Manila, is the second largest international gateway to the country.</p>
+            <p>The Philippines is an archipelago consisting of 7,100 islands with a total land area of approximately 300,000 square kilometers. It has three major island groups-Luzon in the north, Visayas in the middle and Mindanao further down in the South. The current population of the Philippines is about 80 million people. Filipinos are basically of Indo-Malay racial stock, mixed with some Chinese and Spanish ancestry.</p>
+        </div>
+        <div class="history">
+            <div class="image" onclick="showDetails('Destination 4')">
+                <img src="image/history.png" alt="Home Image 4">
+            </div>
+            <p>Historians believe the Philippines dates back to the Paleolithic age. Based on the archaeological artifacts recovered, Filipino society and culture were fairly developed prior to contacts with other countries.
+                Filipinos had commercial relations early on with China, Indo-China, Malaysia, India and Arab countries. Chinese silk, porcelain, jars, gold ivory, and beads were traded for wax, bird's nest, teakwood, rattan, pearls, precious stones and other marine and forest products.</p>
+            <p>Spanish Colonial Period : Ferdinand Magellan came to the Philippines on March 16, 1521 and claimed the country for the Spanish crown. A colonial government was established in Manila in 1571. Spain introduced changes in the political, social and cultural life of the people. One of these is Christianity.
+                In 1896, the Filipinos staged the first nationalistic revolution in Asia against the Spaniards. The 1896 Revolution was the culmination of revolts against Spanish oppression.</p>
+            </div>
+    </section>
+
+    <!-- Trend Section -->
+    <section id="trend">
+        <h2>Trending Destinations</h2>
+        <div class="trend-gallery">
+            <div class="trend-item">
+                <img src="image/boracay.png" alt="Trend 1">
+                <p>Boracay Beach</p>
+                <p>Boracay, one of the top Islands in the Philippines, is popular for its beaches and blessed with a long stretch of powdery white sand, crystal clear and azure waters, and a stunning sunset. Boracay is the most iconic island in the Philipines and has won multiple awards in previous years.</p>
+                <button onclick="showTravelGuide('Boracay Travel Guide', 'Visayas', 'Beach','Travelers have three main options for reaching Boracay Island: by air to either Caticlan Airport or Kalibo Airport and by ferry from ports in Luzon.There are two primary flight entry points to Boracay Island: Caticlan Airport, the closest and most convenient option, and Kalibo Airport, a more budget-friendly alternative located in the same province but slightly farther away. To help you decide the best entry option, read this Boracay Airport guide for detailed information on both airports and seamless travel tips. Travelers coming from Manila City or Southern Luzon region can also reach Boracay Island by ferry via Batangas Pier, with direct services to Caticlan Jetty Port, the main gateway to Boracay Island. Once you arrive at Caticlan Jetty Port, all travelers must board a ferry for the short, final leg of their journey to the island. The port provides seamless Boracay Island transfers to beautiful shores and serves as the boarding point for ferries that operate frequently, making it easy for visitors to reach their destination.',
+                'The Boracay Island offers an incredible variety of activities, from relaxing on pristine beaches to exploring the islands hidden gems and thrilling adventures. Here are our top recommendations to make the most of your Boracay Island experience. Boracay Islands’s stunning sunsets are best viewed from the water, and there’s no better way than aboard a traditional paraw sailboat. You can book a sunset paraw sailing experience to best enjoy the views of vibrant hues of orange and pink. Get your adrenaline pumping with Boracay Island’s wide range of water sports. Options include banana boat adventure, jet skiing, parasailing, paddleboarding, and helmet diving. For an unforgettable experience, try the crystal kayak ride, which lets you see the vibrant marine life through the transparent base of your kayak.')">Travel Guide</button>
+            </div>
+
+            <div class="trend-item">
+                <img src="image/fortsantiago.png" alt="Trend 2">
+                <p>Fort San Pedro</p>
+                <p>Fort San Pedro, also called Fuerza de la Nuestra Señora del Rosario, was a military defense structure in Iloilo City, Philippines. It was built in 1602 by Pedro Bravo de Acuña to protect the city from Moro and Dutch attacks, and was completely destroyed during World War II. Fort San Pedro in present-day.</p>
+                <button onclick="showTravelGuide('Fort San Pedro Travel Guide', 'Visayas', 'Historical','From within Cebu City: Take a taxi or Grab ride-hailing service directly to the fort, or catch a jeepney heading towards Plaza Independencia or the city’s pier area, indicated by signboards. From Mactan-Cebu International Airport: The quickest option is a taxi or ride-hailing service, but you can also take an airport shuttle or bus to the city center and then switch to a taxi or jeepney. From Cebu’s piers: Fort San Pedro is a short walk from the main pier area. From other parts of Cebu: Arrive by bus at the South or North Bus Terminal, then take a taxi, grab a jeepney, or go to the fort. Take a jeepney to Plaza Independencia or a MyBus from SM City Cebu to Plaza Independencia going to Talisay. Drop off at the location that is closest to the SRP entrance road. Proceed to Plaza Independencia, which is just across from Malacanang sa Sugbo.',
+                'You need to Wear comfortable shoes as there will be walking involved. Bring a camera to capture the beautiful scenery. Stay hydrated and bring water. Sunscreen is recommended for outdoor exposure. Yes, you can walk around San Pedro in Cebu City. The area around Fort San Pedro is pedestrian-friendly, allowing for easy exploration of its historical and cultural landmarks on foot. Walking around this district lets you appreciate the historic fort, nearby Plaza Independencia, and the scenic waterfront, offering a leisurely way to experience the rich history and vibrant atmosphere of Cebu City.')">Travel Guide</button>
+            </div>
+
+            <div class="trend-item">
+                <img src="image/elnido.png" alt="Trend 3">
+                <p>El Nido</p>
+                <p>El Nido, located at the northern tip of Palawan, is often regarded as one of the most beautiful destinations in the Philippines and is a dream for nature lovers and adventurers. This destination is famous for its dramatic limestone cliffs, making El Nido steadily earn its reputation as a must-visit paradise.</p>
+                <button onclick="showTravelGuide('El Nido Travel Guide', 'Visayas', 'Beach','The most common way to get to El Nido, Palawan, is by taking a plane from Manila to Puerto Princesa, and then taking a van from Puerto Princesa to El Nido. It will take you a day, but it’s the cheapest way to go. Another good option is to take a direct flight from Manila to El Nido. That way you don’t spend to much of your holiday time in the transportation. It’s also most expensive and may not be appropriate for backpackers travelling on a tight budget. Located at the very north end of Palawan island, El Nido is quite a remote place (that’s also what makes it a charming place). Until a few years ago, accessing it used to be an adventure in itself, taking up to 24 hours from Puerto Princesa, Palawan’s main city, which is “only” 230 km away. Nowadays, this tropical paradise is much easier to reach… even though it still isnt a total piece of cake.',
+                'Island hopping is the most popular activity when you are in El Nido. There are many tour operators and travel agencies that organize these trips and they are all offering the same tours – A, B, C or D for approximately the same prices. We chose the tour A, which is the most popular together with the tour C. To put in a nutshell, the island hopping tours will introduce you to everything that makes El Nido such a tropical paradise. It definitely is a must-do while you spend your vacations here! You may be wondering which tour to take… It’s a fact that Tour A and Tour C are the most popular. That’s the one the locals will recommend you if you ask them. They will take you to stunning places. It may be a good idea to start with them. But Tour B and Tour D also have their share of wonders. So… choice is yours!')">Travel Guide</button>
+            </div>
+
+            <div class="trend-item">
+                <img src="image/chocolatehills.png" alt="Trend 4">
+                <p>Chocolate Hills</p>
+                <p>The Chocolate Hills are a geological formation in the Bohol province of the Philippines. There are at least 1,260 hills, but there may be as many as 1,776 hills spread over an area of more than 50 square kilometers.</p>
+                <button onclick="showTravelGuide('Chocolate Hills Travel Guide', 'Visayas', 'Hiking','Air travel is the most convenient way to visit Bohol. If you’re coming from Luzon, you have two gateways: from Ninoy Aquino International Airport (NAIA) in Manila and from Clark International Airport in Angeles City to Bohol-Panglao Airport. If you’re flying from Mindanao, you can fly from Davao International Airport. From the Bohol-Panglao Airport, you can make your way to the Dao Integrated Bus Terminal and ride the bus or van to either Carmen or Sagbayan town. When you reach Carmen, ride a habal-habal to take you to the Chocolate Hills Complex.  The Chocolate Hills in Bohol are spread across multiple towns including Bilar, Carmen, Butuan, and more. The Chocolate Hills Complex, a viewing deck that’s most visited by travelers to see these mounds, is located in Carmen. ',
+                'If you’re up to bring your Chocolate Hills tour to a thrilling escapade, make sure to visit the Chocolate Hills Adventure Park (CHAP), where you can experience biking midair (Bike Zip) or surf zipline (The Wave Runner) overlooking the scenic view of the beautiful hills. It is an eco-tourism park located at Barangay Buenos Aires, Carmen. Apart from the Bike Zip and The Wave Runner, visitors can also enjoy the parks many activities and facilities, such as their Rope Courses, feed chickens and fishes, admire butterflies as well as the rich flora and fauna in (Ang Paru-Paro) Butterfly Garden, go horseback riding, and trek up and down their Eco-Hiking Trail, among others. Right before the long stairs leading to the viewing deck, visitors can check out the Serpentarium, where different species and sizes of snakes are aplenty.')">Travel Guide</button>
+            </div>
+
+            <div class="trend-item">
+                <img src="image/siargao.png" alt="Trend 5">
+                <p>Siargao Surfing</p>
+                <p>Siargao is an island of nine municipalities in the province of Surigao del Norte. Known as the “Surfing Capital of the Philippines”, Siargao is mainly responsible for introducing surfing to the country. </p>
+                <button onclick="showTravelGuide('Siargao Travel Guide', 'Mindanao', 'Beach','Traveling to Siargao Island is a breeze, and the most efficient way to reach the island is by plane. You can catch flights to Siargao Island from Manila City or Cebu Island, two major gateways in the Philippines. Alternatively, you can fly into Surigao City and take a ferry to Siargao Island, a scenic option for those who enjoy traveling by sea. By Flights and Ferry: Another popular route is flying to Surigao City and then taking a ferry to Siargao Island. Riding ferries in the Philippines is a fun way to travel, and this option can also be more budget-friendly. You can fly from Cebu Island to Surigao City and then hop on a ferry at Surigao Port, which will take you directly to Siargao Island. Ferry tickets are available daily, and Evaristo & Sons Sea Transport and Atlantis Yohan Express offer regular trips. Ferry from Surigao City: If youre already in Surigao City, head to the Surigao Port, where daily ferries depart for Siargao Island. The ferry ride typically takes about two hours, and both Evaristo & Sons and Atlantis Yohan Express operate convenient trips throughout the day. This is a great option if you are looking for a more scenic and relaxed way to get to Siargao Island With so many convenient ways to reach Siargao Island, whether by air or sea, your tropical adventure is just a flight or ferry ride away!',
+                'Here are some must-try activities in Siargao Island that will make your visit truly unforgettable, from surfing the iconic waves at Cloud 9 to enjoying delightful island-hopping adventures and discovering breathtaking attractions. Get ready to immerse yourself in the vibrant culture and stunning natural beauty that Siargao Island has to offer! If you’re new to surfing and want to ease into the sport, consider booking a surfing lesson in Siargao Island and heading to Jacking Horse, just a short walk from Cloud 9. This surf spot is conveniently located right in front of the Ocean 101 resort and features beginner-friendly waves. While it may not have the same buzz as Cloud 9, Jacking Horse is an excellent place to kick off your surfing journey, often buzzing with fellow beginners eager to ride the waves!')">Travel Guide</button>
+            </div>
+
+            <div class="trend-item">
+                <img src="image/mayon.png" alt="Trend 6">
+                <p>Mayon Volcano</p>
+                <p>The Mayon Volcano is situated in the southern part of the main island of Luzon, 500 kilometres south of Manila. Towering at a height of 2,462 meters above sea level, it is known for its perfectly conical shape whose natural beauty has inspired a number of legends and art.</p>
+                <button onclick="showTravelGuide('Mayon Volcano Travel Guide', 'Luzon', 'Hiking','Mayon Volcano’s striking beauty and perfect cone shape have made it one of the must-see attractions in the Philippines. Located in Albay province in the Bicol region, south of Luzon region, it’s easily accessible via various modes of transportation. By Air: The fastest way to reach Albay province is by flying to Bicol International Airport (DRP), the gateway to the region. Direct flights are available from Manila City, Cebu City, and other major airports in the Philippines. Flight time from Manila City is approximately 1 hour and 20 minutes. By Land: For a scenic and budget-friendly journey, buses from Manila City to Legazpi City in Albay Province offer a 9-hour ride. By Sea: Visitors from Cebu Island Province or Leyte Province can take ferries to Masbate Island and continue by land to Legazpi City in Albay. The ferry ride typically lasts 12-15 hours.',
+                'A visit to Mayon Volcano is more than just admiring its breathtaking cone; it’s about immersing yourself in thrilling adventures and discovering the region’s rich culture. Whether you’re an adrenaline junkie, a history buff, or someone who simply loves stunning views, there’s something for everyone. For thrill-seekers, the 4x4 ATV ride at the foot of Mayon Volcano is a must! Traverse rugged terrain, including rice fields and volcanic rocks, as you make your way to the Lava Wall, a natural formation created by past eruptions. With multiple trails to choose from, this adventure is perfect for all experience levels and even more exhilarating during the rainy season.')">Travel Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-me">
+            <img src="image/profile.png" alt="About Me">
+            <h2>About Me</h2>
+            <p>Hi, I'm Jhon ALec, a passionate traveler sharing my adventures in the Region of the Philippines.</p>
+            <div class="social-links">
+                <a href="mailto:your-email@example.com"><img src="email.png" alt="Email"></a>
+                <a href="https://facebook.com"><img src="fb.png" alt="Facebook"></a>
+                <a href="https://instagram.com"><img src="insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h3>Leave a Message</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    
+
+
+
+    
+    <script>
+        // Function to redirect to travel-guide.html with query parameters
+    function showTravelGuide(destination, region, category,howToGo,details2) {
+        // Construct the URL with query parameters
+        const travelGuideUrl = `travel-guide.html?guide=${encodeURIComponent(destination)}&region=${encodeURIComponent(region)}&category=${encodeURIComponent(category)}
+        &howToGo=${encodeURIComponent(howToGo)}
+        &details2=${encodeURIComponent(details2)}`;
+        // Redirect to the Travel Guide page
+        window.location.href = travelGuideUrl;
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visayas - Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo">
+            <span>Travel Blog</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#trend">Trend</a></li>
+            <li class="dropdown">
+                <a href="#destination">Island Destination</a>
+                <ul class="dropdown-menu">
+                    <li>Luzon
+                        <ul>
+                            <li><a href="luzon.html?category=Beach">Beach</a></li>
+                            <li><a href="luzon.html?category=Hiking">Hiking</a></li>
+                            <li><a href="luzon.html?category=Falls">Falls</a></li>
+                            <li><a href="luzon.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Visayas
+                        <ul>
+                            <li><a href="visayas.html?category=Beach">Beach</a></li>
+                            <li><a href="visayas.html?category=Hiking">Hiking</a></li>
+                            <li><a href="visayas.html?category=Falls">Falls</a></li>
+                            <li><a href="visayas.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                    <li>Mindanao
+                        <ul>
+                            <li><a href="mindanao.html?category=Beach">Beach</a></li>
+                            <li><a href="mindanao.html?category=Hiking">Hiking</a></li>
+                            <li><a href="mindanao.html?category=Falls">Falls</a></li>
+                            <li><a href="mindanao.html?category=Historical">Historical</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <section id="content">
+        <h1 id="region-title">Visayas - <span id="category-title"></span></h1>
+        <div id="destination-list" class="destination-gallery">
+            <!-- JavaScript will dynamically insert content here -->
+        </div>
+    </section>
+
+    <script>
+        // Get the category from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+
+        // Update the page title dynamically
+        document.getElementById('category-title').innerText = category;
+
+        // Define destinations for Visayas with additional details
+        const destinations = {
+            Beach: [
+                { 
+                    name: "Daan Bantayan", 
+                    img: "bantayan.png", 
+                    guide: "Daan Bantayan Travel Guide", 
+                    details: "Bantayan is a very low key island of 120,000 people that makes up part of the Visayas Island group. It is located northwest of the larger island of Cebu. The island is flat, covered in coconut palms and has sand so white that it could give Boracay's White Beach a run for its money!" ,
+                    howToGo: "Cebu to Daanbantayan Route Information The distance between Cebu and Daanbantayan is 71 miles, or approximately 114 kilometers. The only way to get from Cebu to Daanbantayan is by Minivan Depending on how you choose to travel, the following amenities are available:. Cebu to Daanbantayan by minivan The only travel class available is Standard. Each minivan ticket offers an individual seat with basic passenger necessities. Conditions and amenities vary by provider. For more detailed information and availability see all minivan options. Bookaway.com makes it simple and easy to find, compare, and buy city-to-city tickets via bus, train, ferry, and more. We support over 13 languages and 23 currencies worldwide, and we believe that everyone should easily be able to find and purchase what they are looking for. We don’t just want to help you get where you want to go - we want you to enjoy the ride.",
+                    details2: "You’ll not be wanting for things to do in Daanbantayan. Explore the downtown area in search of museums and boutiques…or that next delicious meal. What tickles your fancy? A delectable five-course supper at the restaurant you’ve been hearing about? Or perhaps you’d rather read the paper while sipping hot coffee at one of the cafes scattered throughout town. Take in a show at the theatre, or just walk along down the main thoroughfare, watching people wander past. Why spend hours ruminating over what to do in Daanbantayan? Let the possibilities wash over you as you explore this new region. Move out on foot and get to know the area on a more personal level. Find that perfect souvenir at one of the smaller shops, or reinvent your entire artistic aesthetic at your new favorite gallery. Is the wind whispering suggestions in your mind? Rent a car and take it out beyond city limits and into the wild blue yonder. Explore the smaller cities and towns past the border, and get to know the stories behind them. Visit a county fair and let childhood memories wash over you as cotton candy melts in your mouth. Sample hand-made jam at a stop on a forgotten highway, or let the hustle and bustle of modern life sweep you away as you lose yourself in the organized chaos of a modern metropolis. Your choices are endless—and so are the adventures to come. When you book your journey with Travelocity, you’re never far from Daanbantayan attractions. After all, the money you save when you plan a trip with us is best spent along the way. Whether it’s the roar of the city you crave, or the quiet solitude that comes with a simpler getaway, everything you need to get started is right here."
+                },
+                { 
+                    name: "Malapascua", 
+                    img: "malapascua.png", 
+                    guide: "Malapascua Travel Guide", 
+                    details:"Malapascua Island is located on the northernmost tip of Cebu Island in the Philippines' Visayan Sea. At only one-and-a-half miles long by just over half-a-mile wide, the island is a tiny tropical oasis with some big diving on offer.",
+                    howToGo: "Maya is the main port of entry and exit to the island, and therefore, your first stop when trying to get to Malapascua. It is accessible from Cebu City via bus, van or private car. The buses operating the service from Cebu to Maya are the Ceres Bus and depart from North Bus Terminal on Logarta Avenue, next to Union bank and close to SM Cebu City Mall. If you arrived to Cebu by plane and need to get from Mactan Airport to the North Bus Terminal, a taxi is your best bet. This trip will take around 40 minutes depending on traffic and will cost between 200 and 300 pesos. TIP: When getting out of the terminal just ignore all the transport proposals and walk around 50 meters straight to the end where you will find the white taxis. These are the cheapest option. If when getting onboard the taxi driver tries to negotiate a fix price just kindly request him to turn on the meter. Both the buses and the vans will leave you at the New Maya Port from where you can take the ferry to Malapascua Island. Another way of getting from Cebu to Malapascua is to hire a private van in advance. This service costs between 3500 and 4000 php. It is an advisable option for group travellers since the fare can be good for up to 8 people depending on the type of van, besides, you can request to be picked up at the airport which will save you some time! A taxi, good for up to 4 will cost around 3500 php, but this will depend on your negotiation skills since the fare must be agreed upon with the driver before departure.",
+                    details2: "The underwater scene in Malapascua Island is teeming with beautiful corals and rock formations, perfect for divers, underwater photographers, or anyone who wants to experience life under the sea. Moreover, there are many powdery white sand Malapascua beaches here that can rival the best beaches in Cebu. If you’re planning to visit the thresher sharks and explore the beaches in Malapascua, Cebu this year, here are the top things to do on the island that you should include in your itinerary. The fact that diving to see these thresher sharks is completely eco-friendly and sustainable.  Compared to whale sharks that are often led to dive sites with food and sometimes, motorboats, the thresher sharks in Malapascua Island naturally swim to Monad Shoal every day for their natural cleaning session. Monad Shoal is teeming with wrasse, a small electric blue fish that cleans sea creatures naturally from small fish to big sharks. The crescent-shaped beach is popular for its lineup of classy beachfront hotels and restaurants. It's one of the best beaches in Malapascua for its idyllic atmosphere and calm waters. It’s also a great spot to capture the sunset and some island vibes for travel photography. This is the first beach that will greet you upon arriving on the island paradise. As Malapascua Island’s main beach, it is probably the most commercialized with a lot of hotels, restaurants, and dive shops near the shore. If you fancy a cocktail while watching the sunset, simply walk into one of the beachfront bars and get yourself a drink."
+                }
+            ],
+            Hiking: [
+                { 
+                    name: "Osmeña Peak", 
+                    img: "osmenapeak.png", 
+                    guide: "Osmeña Peak Travel Guide", 
+                    details: "Osmena Peak is one of the highest points in Cebu, with an elevation of 1,013 meters above sea level. This mountain is located in Badian but is most conveniently accessible through Barangay Mantalongon, Dalaguete. It is also popular for its stunning cliffs and rock formations.",
+                    howToGo: "the island province. Here are the steps: By Bus: From Cebu City, go to the South Bus Terminal. Catch a Ceres bus heading to Dalaguete. The ride can take approximately 3 to 4 hours depending on the traffic From Dalaguete Town Proper: Once you arrive at Dalaguete, you can hire a motorcycle taxi, also known as a “habal-habal,” to take you to the Osmeña Peak trailhead. The ride is usually about 20-30 minutes. Hike to the Peak: From the drop-off point or trailhead, you will need to hike to the peak. The trek is generally easy and takes about 15-30 minutes, depending on your pace. The best place to base yourself before and after a hike up Osmena Peak is in Alegria. Here’s how we made it from Alegria to Osmena Peak. In the small town of Alegria in the Philippines, I woke at 3 am, gathered my gear and met our driver at the front of our hostel. For 500 Pesos per person or $10 USD we had a return trip to Osmeña Peak, the tallest peak on Cebu. The three of us crammed onto the habal-habal, which was easy on the wallet but incredibly uncomfortable on the butt cheeks. If you are a budget traveler it will be your only choice from Alegria when looking to hike Osmeña Peak, but if you have the cash rent a car or get some other way up there! We arrived at the registration office, hopped off the bike and feel the feeling rush back into our legs. The entrance fee to hike Osmeña Peak was 30 Pesos or 60 cents (probably increased since 2017). We didn’t ask for a guide but it seemed as though our driver had promised a nice old lady she would have two Aussies to show up to the peak. It was still pitch black and we didn’t know exactly how long or well-signed the hike was so we decided to let the guide come rather than send her back to bed without making any money. In reality, you don’t really need a guide but these two ladies actually brought some good, fun vibes to our little hike.",
+                    details2: "Hiking to this peak is generally considered a beginner-friendly experience as it usually takes about 30 minutes to complete. On the way to the summit, you'll pass through scenic trails from where you can spot nearby vegetable farms since Dalaguete is known for its bountiful crops. The area also enjoys a cooler climate so make sure to bring a light jacket with you if you plan on starting your climb early in the morning. Since the peak is best known as a vantage point for breathtaking sunrises, it's best to hike here before dawn so you can catch the sunrise from the summit. Due to this attraction being one of the most popular Cebu tourist spots, the best time to visit is early in the morning for sunrise, as this way you will beat the crowds. Read on to discover everything you need to know about Cebu Osmena Peak including how to get there, how much it costs, and what to expect when you’re there. Osmena Peak is located in the Badian mountain region in South Cebu, Philippines. Badian is 100km south of Cebu City and public buses run every hour on a daily basis from Cebu South Bus Terminal to Moalboal, Oslob, and Badian. The cost of the bus is around 150 pesos. It’s best visited from the nearby beach towns of Moalboal or Oslob, which are between 50km – 60km away and approximately 1.5 hours drive. The best way to come is to rent a scooter and drive from Oslob or Moalboal to Osmena Peak in Cebu and make your own way up to the hillside village of Mantalongon in the Dalaguete region. There are many scooter rental stores in Moalboal and Oslob where you can get your hands on some wheels for around 400 pesos per day with a full gas tank. The majority of the roads in this region are tar-sealed though beware of washouts and potholes along the way which you may have to slow down for. These mountainous roads are also very windy with a lot of blind corners. I highly recommend purchasing travel insurance, especially when riding on the roads in the Philippines. Safety first!"
+                },
+                { 
+                    name: "Sea Cloud", 
+                    img: "seacloud.png", 
+                    guide: "Sea Cloud Travel Guide", 
+                    details: "Bohol Sea Clouds Danao (Mt. Puntaas) the mountains of Danao in central Bohol there is a viewpoint aptly known as Bohol Sea of Clouds, or Mt. Puntaas. With a viewing area over rice terraces tumbling down into the clouds and an epic ride along Bohol's countryside sprawling with nature, viewpoints won't get better than this!",
+                    howToGo: "It is possible to do a day trip here from Cebu City and many people often visit Kawasan Falls on the same day as well. To make your own way here head to the South Bus Terminal in Cebu City and take a bus heading to Oslob or Santander. Ask the bus driver to let you off at the Dalaguete Junction and from here you can rent a habal habal to take you the rest of the way. There is also a tour you can take which will pick you up and drop you off at your hotel in Cebu City and take you to Osmeña Peak. What’s even better is that the tour also takes you to Kawasan Falls, the most famous waterfall in the Philippines. This tour is a great option if you are short on time but still want to see a couple of the best things on Cebu.  One reason we enjoyed this day hike and would highly recommend it to anyone, is that it takes just 15 – 20 minutes to reach the top from the tourism centre where you arrive. The hike itself is also quite easy with only a couple of short, steeper sections. Halfway along the route there are a couple of shops selling souvenirs, water and light snacks. Once you are near the summit there are two different peaks you can climb. The one on the left side is the main peak, while the one on the right has a less defined path but it seemed to be much quieter. We hiked the main peak on the left, and after a short scramble up some loose rocks, we reached the top of Osmeña Peak. We always recommend staying in Moalboal when exploring the south end of Cebu Island. It is a great hub and allows easy access to the numerous adventure activities in the area, like Aguinid Falls, Inambakan Falls, Binalayan Falls, Dao Falls and the sardine run. From Moalboal we recommend renting a scooter and driving out to Osmeña Peak yourself. Scooter rental costs around 300PHP ($5.86 USD) per day. If you don’t want to ride a scooter out there, you can either jump on a habal habal or a tricycle and have them take you out there, although this will be a more expensive option. The journey from Moalboal takes about 1.5 hours and the roads out here are quite well maintained. There are a few gravelly sections and some potholes but nothing major to worry about. This road will also take you past Cambais Falls, one of the amazing blue waterfalls in the region.",
+                    details2: "Anyone who knows me, knows that I am a sucker for ANYTHING BOHOL. I am one proud Bol-anon. It was no surprise that when I found out that there was something good brewing up the Northern mountains of Bohol, I was there to check it out. A few weeks ago, some photos started circulating around social media about the “sea of clouds” in Danao, Bohol comparable to those that are found in Mt. Pulag or Sagada. Didn’t want to miss out the opportunity and went there to see it first hand. Major shout out to Kuya Reil Cenabre for sharing his photos and for inspiring me to go and witness the magic. (see original post here) I have to really point out that my travel route wasn’t the best or the most practical way of going there. I didn’t planned anything, so hooray for one spontaneous trip. Now that I’ve been there and know a few bits, I could share it to you guys. So here goes another adventure for the books. I first traveled to Clarin (5 towns away from Tagbilaran city), stayed at one of my friend’s house (sometimes lover’s, but ewww). I spent the night there so that by the next day, we could go to Danao early in the morning. I’ll be going to Danao with my friend, Paulette, and two of her cousins, Albert and Rovil. Danao maybe just two towns away, but still, getting there is not as easy as it seems. We woke up early, just before the sun has risen. Too bad that we’ve found out that there were no buses going to Danao directly from Clarin. We have to take a bus going to Sagbayan (the next town from Clarin) and from there, take another bus going to Danao. We were ecstatic during our bus trip to Danao especially that we could see the fog surrounding the town from afar. We were also skeptical because according to the post we found on Facebook about the “sea of clouds”, it stated that we should be there before 8 am. We fully know that by the time we’ll arrived in Danao, it’ll be by 8 am or later."
+                }
+            ],
+            Falls: [
+                { 
+                    name: "Kawasan Falls", 
+                    img: "kawasanfalls.png", 
+                    guide: "Kawasan Falls Travel Guide", 
+                    details:"Kawasan Falls is a three-stage cascade of clear turquoise water from mountain springs located in the jungles of the Cebu island. The falls are part of the Kawasan River in Badian, Cebu, in the Philippines." ,
+                    howToGo: "You can take a bus, private van, or private car/taxi from Cebu City. Bus: The cheapest option is a Ceres bus, which is the Philippines largest bus company. It took about 2 and a half hours and cost 156 PHP ($3 USD) per person. This was for an air conditioned bus. Although it was night and we probably didn’t need it if we had rolled the windows down, especially with how fast the driver was going. Buses without air conditioning cost slightly less. But honestly it’s always pretty hot in the Philippines, so it’s worth it in our opinion. You aren’t able to book a bus online, but can find the schedule here. More details on how to take the bus below. Taxi: You can either take a taxi straight from the airport* for 2,000-2500 PHP ($40-$50 USD). Or book one ahead of time and save you the hassle of negotiating using Klook for around $44 USD. A taxi from the airport will likely cost you more than one you can find and negotiate with from the city. We talked one down to $35 USD for the trip. We considered it, because we were told it was a holiday and we’d be waiting for a bus for hours. But we ended up going to the bus station and walking straight on an empty bus and are glad we saved the $30. Van: There’s also the option of a shared van transfer on Klook for around $17. These are cheaper than taxis, more convenient than buses, But if they fill up, they can be pretty uncomfortable. If you’re not one for booking ahead, you can find public vans for 120 PHP ($2 USD) at the GT Express Terminal in Cebu. This method takes about 2 hours from the terminal to the town center of Moalboal..",
+                    details2: "One of the best outdoor adventure tours in the Philippines is the Kawasan Falls tour in Cebu. This waterfall is popular for its turquoise-colored water that you can dive into from the top of the falls. If you're looking for a more adrenaline-pumping activity, you can also do the Badian canyoneering tour going to Kawasan Falls. Whether you prefer a relaxed or adventure-filled activity, seeing Kawasan Falls and swimming in its refreshing natural pools is one of the best experiences you shouldn't miss when in the Philippines. Here's a guide on everything that you need to know if you want to visit Kawasan Falls in Cebu.  Kawasan Falls in the island province of Cebu is one of the best waterfalls in the Philippines. This set of multi-tier waterfalls lies in Barangay Matutinao, Badian, which sits on the southwestern coast of Cebu and is about 103 kilometers from Cebu City. This coastal town is blessed with natural attractions such as rivers, freshwater streams, and massive jungle canyons. Badian is also close to notable towns like Moalboal (18KM away), Alegria ( 17KM away), and Oslob (73 kilometers away). Kawasan Falls tours have always been popular among international and domestic tourists. This attraction is a photographer’s dream come to life! Visitors are in awe of Kawasan Falls’ clear turquoise water and natural pools. Locals often compare this color to the Gatorade blue drink. Sitting at the foot of the Mantalongon Mountain Range, Kawasan Falls' surroundings consist of gorgeous lush scenery and steep limestone canyon walls. Don’t just stay at the main falls at the bottom. It’s the busiest area, and although it is probably the most beautiful to capture, there are other beautiful falls and pools to explore further up too. If you take the path on the left hand side leading away from the main falls, it will lead you to a maze of other waterfalls and pools to bathe in – without the crowds and way more peaceful. I highly recommend doing this."
+                },
+                { 
+                    name: "Tumalog Falls", 
+                    img: "tumalog.png", 
+                    guide: "Tumalog Falls Travel Guide", 
+                    details: "Nestled in the serene landscapes of Oslob, Cebu, Tumalog Falls is a breathtaking sight that offers a perfect blend of adventure and tranquility. Tumalog Falls is easily accessible by road and scooter.Known for its curtain-like cascades and calm turquoise waters, Tumalog Falls is considered one of the most beautiful waterfalls in South Cebu.",
+                    howToGo: "Tumalog Falls is easily accessed with a motorbike or tricycle ride to the Tumalog Falls car park at the top of Tumalog Falls Road. The road to the waterfall is paved no matter what part of Cebu you’re coming from, so you don’t need to worry about any rough roads. If you’re coming from another area and need to know how to get to Tumalog Falls, use Rome2Rio to find the best and cheapest route. Tumalog Falls from Oslob. Tumalog Falls is a short 20-minute drive from Oslob. If you’re seeing more than one thing on this day of your Philippines itinerary, I recommend taking a scooter rental so you can save a bit of money. Most spots are far away from each other so it’s better to rent a scooter for 200-300 pesos/day than to try and find a habal habal for 1-2 hours each way. Tumalog Falls from Cebu City Going to Tumalog Falls from Cebu City takes a little bit more planning, but it’s worth the day trip to South Cebu. From the Cebu City bus terminal, take the bus heading south to Bato and tell the driver you’d like to be dropped off at Tumalog Falls. A bus ticket should only run you back about 150 pesos one way and they’ll drop you off along the main road to turn into the waterfall. From here, take a habal habal to the car park then walk to the falls. ",
+                    details2: "BRING WATER SHOES |  I actually ended up bringing a pair of flip-flops with me that ended up being useless after a couple steps in the water. The rocks in the pool are pretty sharp, so you’re going to want something to protect your feet if you don’t want to tread water the whole time you’re there. THE WATER IS COLD | I was shocked at how cold the water was, but if you were working up a sweat in the intense sun rays, then this will be the perfect cool down. It takes a minute to get used to the water, but once you get in, you’ll be feeling refreshed in no time and ready to explore the area. TAKE A HABAL HABAL RIDE BACK UP |  I would take full advantage of this so you don’t have to walk down and back up a massive hill. The road is fully paved all the way down, except near the falls, but it is completely safe and a great way to beat everyone else down. VENTURE AROUND |  Once you walk up the steps to the falls, there are various boulders that you can climb to be able to get really cool perspective shots of Tumalog Falls. I wish I had ventured more to the left of the falls and had a drone so I could get all the falls in the photo, but I worked with what I had and I still ended up getting some pretty photos."
+                }
+            ],
+            Historical: [
+                { 
+                    name: "Magellan Cross", 
+                    img: "magellancross.png", 
+                    guide: "Magellan Cross Travel Guide", 
+                    details: "Magellan's Cross is one of the most famous historical landmarks in Cebu City. Housed in an octagonal pavilion made up of adobe and red tiles, many tourists have regularly visited the cross. It is located in front of the Cebu City Hall, near the Basilica Minore Del Sto. Nino at Magallanes Street is named after Magellan.",
+                    howToGo: "Cebu Magellan’s cross is housed in a small chapel located near the Basilica Minore Del Sto. Nino on Magallanes Street (Magallanes being the Spanish name of Magellan), Cebu City, right in front of the Cebu City Hall.  There are a lot of means to get to the Magellan’s Cross. The following can be a guide to visit this historical cross in the Philippines. From the airport, you can directly ride a taxi going to the City Hall. It will cost you more or less P350.00 – Php450. If you are from within Cebu City, you can just ride a jeepney from your place going to downtown Cebu most specifically to the City Hall. If you are a tourist, you can book a Cebu City Sugbo Tour; Magellan’s cross is included in that package. ",
+                    details2: "The  Magellan's Cross has been one of the traditional places to visit in  Cebu because of its rich historical relevance. It has been claimed that the cross was indeed first planted in this spot, and this eventually led to the Spanish-era of the Philippines. Also, this I believe marked the start of Christianity here in our country. Anyway, here in this blog post, I'll be sharing about the place here including places nearby which you may also want to visit. Basilica del Santo Niño is a church that was built centuries ago, and it is equally as important and fascinating as the Magellan's Cross. Unfortunately, during our visit, the Magellan's Cross area and the church was undergoing a renovation; hence, we couldn't see their full beauty. Now, let us now check out the Magellan's Cross. Actually, there is nothing much to see, just the cross itself with some paintings on the ceiling. Also, I observed that people were offering candles below the cross, which according to the prayer warriors are wishes that you pray for. Well, since I felt like it has already been a customary practice to do so, I bought some candles to offer."
+                },
+                { 
+                    name: "Santo Nino", 
+                    img: "santonino.png", 
+                    guide: "Santo Nino Travel Guide", 
+                    details: "Basilica Minore Del Sto. Niño is the oldest Catholic Church in Cebu. The church houses the image of the Sto. Niño, the city's patron, who represents Jesus as a Holy Child. It is also a place for prayer and pilgrimage to a large number of people each year, making it one of the most popular attractions in Cebu.",
+                    howToGo: "It is located in a block beside the D. Jakosalem Street, Osmeña Boulevard, P. Burgos Street, and the Plaza Sugbo where the chapel of Magellan’s Cross is at. Take a ride on a Mybus from Mactan, Cebu to SM Cebu City. From there, ride a jeep with the route code 12I or 10M. Ask the driver to drop you off at the Basilica Minore Del Sto. Niño. Other way is first is From Mactan-Cebu International Airport, head southwest on Airport Access Rd toward M.L. Quezon National Hwy. Continue straight onto M.L. Quezon National Hwy. Use the left lane to merge onto Marcelo Fernan Bridge/Cebu–Cordova Link Expressway. Continue on Cebu–Cordova Link Expressway. Take Sergio Osmeña Jr Blvd to Osmena Blvd in Cebu City. Merge onto Sergio Osmeña Jr Blvd. Continue onto Sergio Osmeña Blvd. Turn right onto D. Jakosalem St. Turn left onto P. Burgos St. Turn right onto Osmena Blvd. Basilica del Santo Niño will be on the left.",
+                    details2: "When visiting the Basilica del Santo Niño, you must see the Minor Basilica, the oldest Roman Catholic church in the Philippines. Built in 1565, this historic church houses the image of the Santo Niño, given as a gift by Ferdinand Magellan to the wife of Rajah Humabon upon her baptism. Next to the Minor Basilica is a museum dedicated to the Holy Child. It showcases many historical artifacts, as well as replicas of the Santo Niño from different regions of the Philippines. The museum is open Tuesdays to Sundays from 8 AM to 12 PM and 1 PM to 5 PM. The admission fee is P30 for adults and P15 for students. Every year during the Sinulog Festival, devotees do a pilgrimage walk from Fuente Osmeña to the Basilica Minore del Santo Niño. The 9-kilometer walk, also known as the “Walk with Jesus,” is done barefoot while praying the rosary. Even if you visit outside of the Sinulog season, you can still do your pilgrimage walk to honor the Santo Niño. "
+                }
+            ]
+        };
+
+       // Generate content dynamically
+       const destinationList = document.getElementById('destination-list');
+        if (destinations[category]) {
+            destinations[category].forEach((place) => {
+                const item = document.createElement('div');
+                item.className = 'destination-item';
+                item.innerHTML = `
+                    <img src="image/${place.img}" alt="${place.name}">
+                    <h3>${place.name}</h3>
+                    <p>${place.details}</p>
+                    
+                `;
+                const button = document.createElement('button');
+    button.innerText = 'Travel Guide';
+
+    // Set the button's onclick handler
+    button.onclick = () => {
+        const url = `travel-guide.html?region=Luzon&category=${category}&guide=${place.guide}&howToGo=${encodeURIComponent(place.howToGo)}&details2=${encodeURIComponent(place.details2)}`;
+        location.href = url;
+    };
+
+    item.appendChild(button); // Add the button to the destination item
+    destinationList.appendChild(item); // Add the item to the destination list
+            });
+        } else {
+            destinationList.innerHTML = "<p>No destinations available for this category.</p>";
+        }
+    </script>
+</body>
+</html>
